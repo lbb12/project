@@ -3,18 +3,28 @@
  <head>
  	<meta charset="UTF-8">
  	<title>Document</title>
-  	<style>      
-	*{margin:0;padding:0;}
+	<script src="js/vue.js"></script>
+  <style>      
+	*{margin:0;padding:0;font-size:12px;color:#333999;}
 	li{list-style:none;}
 	.clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both;}
 	.clearfix {*zoom:1;}
-	.top{width:400px;height:400px;background:yellow;display:table-cell;vertical-align: middle;}
-	.top p{width:10px;height:10px;margin:0 auto;}
-	</style> 
+	.box{width:300px;height:300px;border:1px solid #ddd;margin:100px;position:relative;}
+	.box .in{width:300px;height:200px;background:#f09dee;position:absolute;bottom:0;left:0;}
+	.box h3{width:300px;height:30px;background:#216eff;text-align:center;line-height:30px;color:#fff;}
+	
+  </style>
 </head>
 <body>
-	<div class="top">
-		<p>love</p>
+	<div class="box">
+		<myvue :nes.sync='parentNes' num = '1'></myvue>
+		<div class='in'>{{parentNes}}</div>
 	</div>
+	<script src='js/promise.js'></script>
 </body>
 </html>
+  
+
+
+
+

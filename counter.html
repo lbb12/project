@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+	<script src="js/jquery-1.11.2.min.js"></script>
+  <style>      
+	*{margin:0;padding:0;}
+	.clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both;}
+	.clearfix {*zoom:1;}
+	.cnt{counter-reset:p-count 0;width:300px;padding:20px;border:1px solid #ddd;margin:100px;}
+	.cnt p{font-size:12px;line-height:30px;position:relative;padding-left:35px;counter-increment:p-count 1;}
+	.cnt p:before{content:counter(p-count)' >';position:absolute;top:0;left:0;}
+  </style> 
+</head>  
+<body>
+	<div class="cnt">
+		<p>这是第一条</p>
+		<p>这是第二条</p>
+		<p>这是第三条</p>
+		<p>这是第四条</p>
+		<p>这是第五条</p>
+		<p>这是第六条</p>
+		<p>这是第七条</p>
+	</div>
+</body>
+</html>
+  
+
+
+
+
