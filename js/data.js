@@ -32,16 +32,18 @@ var o = {
 	}
 };
 
-function tree(o){
+//遍历二叉树深度；
+function treeDeep(o){
 	if(o==null){
 		return 0;
 	}
-	var left = tree(o.left);
-	var right = tree(o.right);
+	var left = treeDeep(o.left);
+	var right = treeDeep(o.right);
 	return Math.max(left,right)+1;
 }
+console.log(treeDeep(o));
 
-console.log(tree(o));
+//
 
 
 
