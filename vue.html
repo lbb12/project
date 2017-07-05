@@ -1,0 +1,40 @@
+vue<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <script src="js/jquery-1.11.2.min.js"></script>
+    <title>session</title>
+    <script src="js/vue.js"></script>
+    <style type="text/css">
+    	*{margin:0;padding:0;}
+        .box{width:100px;height:100px;background:red;}
+        .pen{width:200px;height:200px;background:yellow;}   
+    </style>
+    </script>
+</head>
+<body>
+   <div id="app">
+       <input type="input"  v-model='val'/>
+       <ul>
+           <li @click='change'>{{val}}</li>
+       </ul>
+   </div> 
+</body>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            val:'201'
+        },
+        methods:{
+          change(e){
+            this.val = e.target.innerHTML + 'lalala';
+          }
+        }
+    });
+</script>
+
+</html>
+
