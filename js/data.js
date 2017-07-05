@@ -4,7 +4,11 @@ var o = {
 		value:2,
 		left:{
 			value:3,
-			left:null,
+			left:{
+				value:0,
+				left:null,
+				right:null
+			},
 			right:null
 		},
 		right:{
@@ -26,9 +30,18 @@ var o = {
 			right:null
 		}
 	}
+};
+
+function tree(o){
+	if(o==null){
+		return 0;
+	}
+	var left = tree(o.left);
+	var right = tree(o.right);
+	return Math.max(left,right)+1;
 }
 
-
+console.log(tree(o));
 
 
 
