@@ -1,13 +1,4 @@
-var str = 'atmcdn';
-var change = (str) => {
-	var arr = str.split('');
-	return arr.map(function(value,index,self){
-		return value + value.toUpperCase();
-	}).join('');
-}
-
-console.log(change(str));
-
+var arr=[12,3,4,5,5,2,23,3];
 
 
 
