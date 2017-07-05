@@ -1,4 +1,32 @@
-var arr=[12,3,4,5,5,2,23,3];
+var o = {
+	value:1,
+	left:{
+		value:2,
+		left:{
+			value:3,
+			left:null,
+			right:null
+		},
+		right:{
+			value:5,
+			left:null,
+			right:null
+		}
+	},
+	right:{
+		value:3,
+		left:{
+			value:4,
+			left:null,
+			right:null
+		},
+		right:{
+			value:3,
+			left:null,
+			right:null
+		}
+	}
+}
 
 
 
