@@ -31,8 +31,37 @@ var o = {
 		}
 	}
 };
+//找路径
+function findPath(o,i){
+	if(o == null){
+		return;
+	}
+	var arr =[];
+	var currentSum = 0;
+	findpath(o,i,currentSum,arr);
+}
 
-//遍历二叉树深度；
+function findpath(o,i,currentSum,arr){
+	currentSum += o.value;
+	arr.push(o.value);
+	if(o.left==null&&o.right==null){
+		if(currentSum==i){
+			console.log(arr);			
+		}
+	}
+	if(o.left!=null){
+		findpath(o.left,i,currentSum,arr);
+	}
+	if(o.right!=null){
+		findpath(o.right,i,currentSum,arr);
+	}
+	arr.pop();
+}
+
+findPath(o,7);
+
+
+//深度
 function treeDeep(o){
 	if(o==null){
 		return 0;
@@ -42,9 +71,4 @@ function treeDeep(o){
 	return Math.max(left,right)+1;
 }
 console.log(treeDeep(o));
-
-//
-
-
-
 
